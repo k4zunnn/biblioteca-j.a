@@ -18,3 +18,9 @@ class aluno(models.Model):
        return str(self.nome_aluno)
 
 
+class avisos(models.Model):
+    titulo = models.CharField(max_length=100)
+    descricao = models.TextField()
+    data_publicacao = models.DateField(auto_now_add=True)
+    def __str__(self):
+        return str(self.titulo)
